@@ -45,7 +45,8 @@
 
 .gen_lime
 {
-    background-color: lime;
+  /*  background-color:  #ff66ff;   */
+    background-image: linear-gradient(#ff80ff,#ff1aff);
     margin: 0px; 
     text-align: center;
     font-size: 120%; 
@@ -127,6 +128,20 @@
 .blink_me {
   animation: blinker 1s ;
   animation-iteration-count: 6;
+}
+
+
+
+#subject_name_caption_buffer 
+{
+  background-image: linear-gradient(whitesmoke,  #ff80ff); 
+  padding-top:200px; 
+}
+
+#choose_chapter 
+{
+  padding:05px;
+  background-color: #80ff80;
 }
 
 @keyframes blinker {
