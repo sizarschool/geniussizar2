@@ -165,7 +165,7 @@
   flex-flow: row wrap;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5px 0px 0px 0px;
+  padding: 5px 3px 5px 2px;
   
 }
 
@@ -176,7 +176,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  
+  margin: 2px 0px 0px 0px;
   line-height: normal;
   height: auto;
   padding: 7px;
