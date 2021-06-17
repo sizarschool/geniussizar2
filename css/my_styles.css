@@ -160,6 +160,13 @@
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #3385ff;
+  
+  display:flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px 0px 0px 0px;
+  
 }
 
 /* Style the buttons inside the tab */
@@ -169,9 +176,12 @@
   border: none;
   outline: none;
   cursor: pointer;
-  /*padding: 14px 16px; */
+  
+  line-height: normal;
+  height: auto;
+  padding: 7px;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 14px;
   color: black;
 }
 
