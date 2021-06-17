@@ -101,42 +101,22 @@ function sanskrit_selectFunction() {
 }
 </script>
 
-
-<script>
-function openSubject(evt, subjectName) {
-  var m,i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(subjectName).style.display = "block";
-  evt.currentTarget.className += " active";
-  document.documentElement.scrollTop = 0;
-}
-</script>
-
-
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <div style="position:sticky ;top:0px; position: -webkit-sticky;"> 
-      <div class="row" >
+      <div class="row">
         <div id="logo"> 
             <div> <h1><a href="index.html">Genius Sizar</a></h1> </div> 
             <div> <h5>Online Learning Portal</h5></div>
         </div>
       </div>
       
-      
+      <div id="hindi"></div>
   
-      <div class="row" >
+      <div class="row" style="position:sticky ;top:0; position: -webkit-sticky;" >
           <div class="row" id="grade_backtoschool">
                 <div class="" id="grade"> 
                     Grade 9
@@ -159,28 +139,15 @@ function openSubject(evt, subjectName) {
                      <div class="subjects" ><a href='#science'>Science</a></div>
                      <div class="subjects" ><a href='#sanskrit'>Sanskrit</a></div>
                      <div class="subjects" ><a href='#more'>More</a></div>
-                        <div id="su" >rrrrrrrrrr</div>
+                        
                     </div>
                 </div>
-      </div> 
+      </div>
       
+      <!-- sticky menu part end-->
       
-      
-      <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openSubject(event, 'Hindi')">Hindi</button>
-            <button class="tablinks" onclick="openSubject(event, 'English')">English</button>
-            <button class="tablinks" onclick="openSubject(event, 'Maths')">Maths</button>
-            <button class="tablinks" onclick="openSubject(event, 'Evs')">Ev.Study</button>
-            <button class="tablinks" onclick="openSubject(event, 'Sst')">Social Study</button>
-            <button class="tablinks" onclick="openSubject(event, 'Science')">Science</button>
-            <button class="tablinks" onclick="openSubject(event, 'Sanskrit')">Sanskrit</button>
-            <button class="tablinks" onclick="openSubject(event, 'More')">More</button>
-        </div>
-  
-      </div>  <!-- sticky menu part end-->
       <!-- hindi subject start-->      
-      <div id='Hindi' class="tabcontent row" >
+      <div class="row">
           <div class="gen_lime" style="padding-top:20px ">
               Hindi
           </div>
@@ -218,9 +185,9 @@ function openSubject(evt, subjectName) {
       
       
       <!-- English subject start-->      
-      <div id='English' class="tabcontent row">
-          <div  id="subject_name_caption_bufferq"></div>
-          <div id="english" class="gen_lime" style="padding-top:00px ">
+      <div class="row">
+          <div  id="subject_name_caption_buffer"></div>
+          <div id="english" class="gen_lime" style="padding-top:100px ">
               English
           </div>
           <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
@@ -257,7 +224,7 @@ function openSubject(evt, subjectName) {
       
       
       <!-- Maths subject start-->      
-      <div id="Maths" class="tabcontent row">
+      <div class="row">
           <div  id="subject_name_caption_buffer"></div>
           <div id="maths" class="gen_lime" style="  padding-top:100px;   ">
               Maths
@@ -298,7 +265,7 @@ function openSubject(evt, subjectName) {
       
       
       <!-- sst subject start-->      
-      <div id="Sst" class="tabcontent row">
+      <div class="row">
           <div  id="subject_name_caption_buffer"></div>
           <div id="sst" class="gen_lime" style="  padding-top:100px;   ">
               Social Studies
@@ -337,7 +304,7 @@ function openSubject(evt, subjectName) {
       
       
       <!-- science subject start-->      
-      <div id="Science" class="tabcontent row">
+      <div class="row">
           <div  id="subject_name_caption_buffer"></div>
           <div id="science" class="gen_lime" style="  padding-top:100px;   ">
               Science
@@ -378,7 +345,7 @@ function openSubject(evt, subjectName) {
       
       
       <!-- sanskrit subject start-->      
-      <div id="Sanskrit" class="tabcontent row">
+      <div class="row">
           <div  id="subject_name_caption_buffer"></div>
           <div id="sanskrit" class="gen_lime" style="  padding-top:100px;   ">
               Sanskrit
