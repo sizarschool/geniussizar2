@@ -173,10 +173,9 @@
 .tab button {
  /* background-color: inherit;  */
   float: left;
-  border: none;
-  outline: none;
+  border-style:dashed ;
   cursor: pointer;
-  margin: 2px 0px 0px 0px;
+  margin: 2px 0px 2px 0px;
   line-height: normal;
   height: auto;
   padding: 7px;
