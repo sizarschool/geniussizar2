@@ -117,6 +117,7 @@ function openSubject(evt, subjectName) {
   evt.currentTarget.className += " active";
   document.documentElement.scrollTop = 0;
 }
+
 </script>
 
 
@@ -155,7 +156,7 @@ function openSubject(evt, subjectName) {
       
       <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openSubject(event, 'Hindi')">Hindi</button>
+            <button class="tablinks  active" onclick="openSubject(event, 'Hindi')">Hindi</button>
             <button class="tablinks" onclick="openSubject(event, 'English')">English</button>
             <button class="tablinks" onclick="openSubject(event, 'Maths')">Maths</button>
             <button class="tablinks" onclick="openSubject(event, 'Evs')">Ev.Study</button>
@@ -167,7 +168,7 @@ function openSubject(evt, subjectName) {
   
       </div>  <!-- sticky menu part end-->
       <!-- hindi subject start-->      
-      <div id='Hindi' class="tabcontent row" >
+      <div id='Hindi' class="tabcontent row" style= "display:block ;" >
           <div class="gen_lime" style="padding-top:20px ">
               Hindi
           </div>
