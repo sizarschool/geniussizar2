@@ -112,7 +112,7 @@
 .sub_videos
 {
     display:flex;
-    flex-flow: wrap; 
+    flex-flow: nowrap; 
     justify-content: space-around;
     align-content: space-around;
     padding: 10px
