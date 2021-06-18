@@ -27,7 +27,6 @@
 
    <script src="js/jquery-latest.min.js" type="text/javascript"></script>
 
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -53,37 +52,54 @@
 
 </script>
 
-
 <script>
-function subject_chapter_selectFunction(subj) {
-  var x = document.getElementById(subj).value;
-  document.getElementById("subject_iframe").innerHTML = x;
+function hindi_selectFunction() {
+  var x = document.getElementById("hindi_select").value;
+  document.getElementById("hindi_iframe").innerHTML = x;
 }
 </script>
 
 <script>
-function openSubject(evt, subjectName) {
-  var m,i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(subjectName).style.display = "block";
-  evt.currentTarget.className += " active";
-  document.documentElement.scrollTop = 0;
-  
-  m=document.getElementById(subjectName).getElementsByTagName("select");
-  for (i = 0; i < m.length; i++) {
-    m[i].options[0].selected='selected';
-  }
+function english_selectFunction() {
+  var x = document.getElementById("english_select").value;
+  document.getElementById("english_iframe").innerHTML = x;
 }
-
 </script>
 
+<script>
+function maths_selectFunction() {
+  var x = document.getElementById("maths_select").value;
+  document.getElementById("maths_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function evs_selectFunction() {
+  var x = document.getElementById("evs_select").value;
+  document.getElementById("evs_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function sst_selectFunction() {
+  var x = document.getElementById("sst_select").value;
+  document.getElementById("sst_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function science_selectFunction() {
+  var x = document.getElementById("science_select").value;
+  document.getElementById("science_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function sanskrit_selectFunction() {
+  var x = document.getElementById("sanskrit_select").value;
+  document.getElementById("sanskrit_iframe").innerHTML = x;
+}
+</script>
 
 </head>
 <body>
@@ -91,17 +107,16 @@ function openSubject(evt, subjectName) {
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <div style="position:sticky ;top:0; position: -webkit-sticky;"> 
-      <div class="row" >
+      <div class="row">
         <div id="logo"> 
             <div> <h1><a href="index.html">Genius Sizar</a></h1> </div> 
             <div> <h5>Online Learning Portal</h5></div>
         </div>
       </div>
       
-      
+      <div id="hindi"></div>
   
-      <div class="row" >
+      <div class="row" style="position:sticky ;top:0; position: -webkit-sticky;" >
           <div class="row" id="grade_backtoschool">
                 <div class="" id="grade"> 
                     Grade 8
@@ -113,41 +128,35 @@ function openSubject(evt, subjectName) {
                     <A HREF="javascript:location.reload(true);">Refresh</A>
                 </div>               
           </div>
-
-      </div> 
+                <div class="row">
+                    <div id="subject_menu">
+            
+                     <div class="subjects" ><a href='#hindi'>Hindi</a></div>
+                     <div class="subjects" ><a href='#english'>English</a></div>
+                     <div class="subjects" ><a href='#maths'>Maths</a></div>
+                     <div class="subjects" ><a href='#evs'>Ev.Study</a></div>
+                     <div class="subjects" ><a href='#sst'>Social Study</a></div>
+                     <div class="subjects" ><a href='#science'>Science</a></div>
+                     <div class="subjects" ><a href='#sanskrit'>Sanskrit</a></div>
+                     <div class="subjects" ><a href='#more'>More</a></div>
+                        
+                    </div>
+                </div>
+      </div>
       
+      <!-- sticky menu part end-->
       
-      
-      <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks  active" onclick="openSubject(event, 'Hindi')">Hindi</button>
-            <button class="tablinks" onclick="openSubject(event, 'English')">English</button>
-            <button class="tablinks" onclick="openSubject(event, 'Maths')">Maths</button>
-            <button class="tablinks" onclick="openSubject(event, 'Evs')">Ev.Study</button>
-            <button class="tablinks" onclick="openSubject(event, 'Sst')">Social Study</button>
-            <button class="tablinks" onclick="openSubject(event, 'Science')">Science</button>
-            <button class="tablinks" onclick="openSubject(event, 'Sanskrit')">Sanskrit</button>
-            <button class="tablinks" onclick="openSubject(event, 'More')">More</button>
-        </div>
-  
-      </div>  <!-- sticky menu part end-->
-  
       <!-- hindi subject start-->      
-      <div id='Hindi' class="tabcontent row" style= "display:block ;" > 
-          <div class="gen_lime" >
+      <div class="row">
+          <div class="gen_lime" style="padding-top:20px ">
               Hindi
           </div>
-          
-          <div class="" style="padding-top:05px; padding-right:30px; text-align: right"> 
-              
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
+               
           </div>
-
-          <div id="choose_chapter" >
-              
-          <label id="label_choose_chapter" for="hindi_select">Choose Chapter:</label>
-              
-          <select id="hindi_select" onchange="subject_chapter_selectFunction('hindi_select')">
-            <option disabled selected value> -- select -- </option>
+          <div id="choose_chapter">
+          <label for="hindi_select">Choose Chapter:</label>
+          <select id="hindi_select" onchange="hindi_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3zv?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uv90e?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uv90f?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-3
@@ -162,24 +171,29 @@ function openSubject(evt, subjectName) {
           </select>
           </div>
          
-         
+          <div class="sub_videos">   
+              <div id="hindi_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3zv?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>
+              </div>             
+              
+          </div> 
       </div>          
       <!-- hindi subject end-->     
       
       
       
       <!-- English subject start-->      
-      <div id='English' class="tabcontent row">
-          <div id="english" class="gen_lime" >
+      <div class="row">
+          <div  id='subject_name_caption_buffer'></div>
+          <div id="english" class="gen_lime" style="padding-top:100px ">
               English
           </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
                
           </div>
           <div id="choose_chapter">
-          <label id="label_choose_chapter" for="english_select">Choose Chapter:</label>
-          <select id="english_select" onchange="subject_chapter_selectFunction('english_select')">
-            <option disabled selected value> -- select -- </option>  
+          <label for="english_select">Choose Chapter:</label>
+          <select id="english_select" onchange="english_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3u9?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3ua?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3ub?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-3
@@ -195,27 +209,33 @@ function openSubject(evt, subjectName) {
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7whcul?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-9 Part-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7whcum?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-9 Part-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7whcun?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-10 Part-2
-                           
+                                  
           </select>
           </div>
          
+          <div class="sub_videos">   
+              <div id="english_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uu3u9?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe> 
+              </div>             
+              
+          </div> 
       </div>          
       <!-- English subject end-->       
       
       
       
       <!-- Maths subject start-->      
-      <div id="Maths" class="tabcontent row">
-          <div id="maths" class="gen_lime" >
+      <div class="row">
+          <div  id="subject_name_caption_buffer"></div>
+          <div id="maths" class="gen_lime" style="  padding-top:100px;   ">
               Maths
           </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
                
           </div>
           <div id="choose_chapter">
-          <label id="label_choose_chapter" for="maths_select">Choose Chapter:</label>
-          <select id="maths_select" onchange="subject_chapter_selectFunction('maths_select')">
-            <option disabled selected value> -- select -- </option>  
+          <label for="maths_select">Choose Chapter:</label>
+          <select id="maths_select" onchange="maths_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uzxyz?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uzxz1?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uzxz2?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-3
@@ -229,50 +249,34 @@ function openSubject(evt, subjectName) {
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7wiuho?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-10
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7wiuhq?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-11
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7wiuhr?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-12
-            
+              
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="maths_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uzxyz?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div> 
       </div>          
       <!-- Maths subject end-->     
             
       
-
-      
-      <!-- EVS subject start-->      
-      <div id="Evs" class="tabcontent row">
-          <div id="evs" class="gen_lime" >
-              Environmental Studies
-          </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
-               
-          </div>
-          <div id="choose_chapter">
-          <label id="label_choose_chapter" for="evs_select">Choose Chapter:</label>
-          <select id="evs_select" onchange="subject_chapter_selectFunction('evs_select')">
-            <option disabled selected value> -- Subject not applicable -- </option>  
-          </select>
-          </div>
-          
-      </div>          
-      <!-- EVS subject end-->     
-            
-      
-
       
       
       <!-- sst subject start-->      
-      <div id="Sst" class="tabcontent row">
-          <div id="sst" class="gen_lime" >
+      <div class="row">
+          <div  id="subject_name_caption_buffer"></div>
+          <div id="sst" class="gen_lime" style="  padding-top:100px;   ">
               Social Studies
           </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
                
           </div>
           <div id="choose_chapter">
-          <label id="label_choose_chapter" for="sst_select">Choose Chapter:</label>
-          <select id="sst_select" onchange="subject_chapter_selectFunction('sst_select')">
-            <option disabled selected value> -- select -- </option>  
+          <label for="sst_select">Choose Chapter:</label>
+          <select id="sst_select" onchange="sst_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peervideo.club/videos/embed/46cd9a14-38e8-4fbe-8191-2a0d96232baa?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Social Science Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peervideo.club/videos/embed/2f792488-ae02-489f-846a-015ab57c1378?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Social Science Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peervideo.club/videos/embed/97940562-edc7-40e3-b627-06f2d67b96e4?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Social Science Chapter-3
@@ -287,7 +291,13 @@ function openSubject(evt, subjectName) {
                
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="sst_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://peervideo.club/videos/embed/46cd9a14-38e8-4fbe-8191-2a0d96232baa?warningTitle=0" frameborder="0" allowfullscreen></iframe>              
+              </div>             
+              
+          </div> 
       </div>          
       <!-- sst subject end-->       
       
@@ -295,17 +305,17 @@ function openSubject(evt, subjectName) {
       
       
       <!-- science subject start-->      
-      <div id="Science" class="tabcontent row">
-          <div id="science" class="gen_lime">
+      <div class="row">
+          <div  id="subject_name_caption_buffer"></div>
+          <div id="science" class="gen_lime" style="  padding-top:100px;   ">
               Science
           </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
                
           </div>
           <div id="choose_chapter">
-          <label id="label_choose_chapter" for="science_select">Choose Chapter:</label>
-          <select id="science_select" onchange="subject_chapter_selectFunction('science_select')">
-            <option disabled selected value> -- select -- </option>  
+          <label for="science_select">Choose Chapter:</label>
+          <select id="science_select" onchange="science_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/k5KtTCuQGMzJpIwXK9w?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/k4q475NnMwYy5YwXKa6?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/k28TrY5V5OAtfewXKa8?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-3
@@ -317,10 +327,16 @@ function openSubject(evt, subjectName) {
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://bittube.video/videos/embed/b4b9ad42-76cf-45a7-9fb1-8c1b4182f6ac?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-8
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://bittube.video/videos/embed/2ca66c53-ec07-4cfb-9eb2-60750b540a01?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-9
             <option value= '<iframe sandbox="allow-same-origin allow-scripts " src="https://bittube.video/videos/embed/4ecbe3f4-23ae-4648-b884-5a021a0d2d37?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-10
-                
+                 
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="science_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/k5KtTCuQGMzJpIwXK9w?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div> 
       </div>          
       <!-- science subject end-->     
             
@@ -328,17 +344,17 @@ function openSubject(evt, subjectName) {
       
       
       <!-- sanskrit subject start-->      
-      <div id="Sanskrit" class="tabcontent row">
-          <div id="sanskrit" class="gen_lime" >
+      <div class="row">
+          <div  id="subject_name_caption_buffer"></div>
+          <div id="sanskrit" class="gen_lime" style="  padding-top:100px;   ">
               Sanskrit
           </div>
-          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+          <div class="" style="padding-top:20px; padding-right:30px; text-align: right">
                
           </div>
           <div id="choose_chapter">
-          <label id="label_choose_chapter" for="sanskrit_select">Choose Chapter:</label>
-          <select id="sanskrit_select" onchange="subject_chapter_selectFunction('sanskrit_select')">
-            <option disabled selected value> -- select -- </option>  
+          <label for="sanskrit_select">Choose Chapter:</label>
+          <select id="sanskrit_select" onchange="sanskrit_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uv9lp?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uw77u?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uv9lo?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-3
@@ -352,26 +368,23 @@ function openSubject(evt, subjectName) {
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7wkdm7?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-10
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7whcoi?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-11
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7wkdm8?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>'> Chapter-12
-            
+              
           </select>
           </div>
          
+          <div class="sub_videos">   
+              <div id="sanskrit_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7uv9lp?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div> 
       </div>          
       <!-- sanskrit subject end-->     
             
-
-          <div class="sub_videos">   
-              <div id="subject_iframe">
-                <iframe sandbox="allow-same-origin allow-scripts " src="data:text/html,<p>Please select Chapter and Subject.</p>" frameborder="0" allowfullscreen></iframe>               
-              </div>             
-              
-          </div>       
-      
-      
-
+            
+<div  style="padding-top:500px; "></div>
       
   </div>
-  
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

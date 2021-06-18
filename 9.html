@@ -63,7 +63,7 @@ function subject_chapter_selectFunction(subj) {
 
 <script>
 function openSubject(evt, subjectName) {
-  var i, tabcontent, tablinks;
+  var m,i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -75,6 +75,11 @@ function openSubject(evt, subjectName) {
   document.getElementById(subjectName).style.display = "block";
   evt.currentTarget.className += " active";
   document.documentElement.scrollTop = 0;
+  
+  m=document.getElementById(subjectName).getElementsByTagName("select");
+  for (i = 0; i < m.length; i++) {
+    m[i].options[0].selected='selected';
+  }
 }
 
 </script>
