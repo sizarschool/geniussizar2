@@ -158,15 +158,17 @@
 
 /* Style the tab */
 .tab {
-  overflow: hidden;
+  
   border: 1px solid #ccc;
   background-color: #3385ff;
   
   display:flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   flex-direction: row;
   justify-content: space-around;
   padding: 5px 3px 5px 2px;
+  
+
   
 }
 
