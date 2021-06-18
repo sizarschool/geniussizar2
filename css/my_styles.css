@@ -113,7 +113,6 @@
 {
     display:flex;
     flex-flow: wrap; 
-    overflow: scroll;
     justify-content: space-around;
     align-content: space-around;
     padding: 10px
