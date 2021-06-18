@@ -186,6 +186,7 @@
   transition: 0.3s;
   font-size: 12px;
   color: black;
+  text-transform: capitalize;
 }
 
 /* Change background color of buttons on hover */
