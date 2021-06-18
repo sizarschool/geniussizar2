@@ -137,9 +137,9 @@ function openSubject(evt, subjectName) {
               
           </div>
 
-          <div id="choose_chapter" style="display: flex; flex-flow: row wrap; align-content: center; align-items: center;  justify-content: flex-start; ">
+          <div id="choose_chapter" >
               
-          <label for="hindi_select" style="margin-right: 10px;">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="hindi_select">Choose Chapter:</label>
               
           <select id="hindi_select" onchange="subject_chapter_selectFunction('hindi_select')">
             <option disabled selected value> -- select -- </option>
@@ -174,7 +174,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="english_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="english_select">Choose Chapter:</label>
           <select id="english_select" onchange="subject_chapter_selectFunction('english_select')">
             <option disabled selected value> -- select -- </option>  
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/855fb039-41c5-4f45-9a66-c196efe817a2?warningTitle=0" frameborder="0" allowfullscreen></iframe> '>Chapter-1
@@ -207,7 +207,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="maths_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="maths_select">Choose Chapter:</label>
           <select id="maths_select" onchange="subject_chapter_selectFunction('maths_select')">
             <option disabled selected value> -- select -- </option>  
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ebba925-f408-4060-9384-d3d98034b4e3?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1 part1
@@ -242,7 +242,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="evs_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="evs_select">Choose Chapter:</label>
           <select id="evs_select" onchange="subject_chapter_selectFunction('evs_select')">
             <option disabled selected value> -- Subject not applicable -- </option>  
           </select>
@@ -264,7 +264,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="sst_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="sst_select">Choose Chapter:</label>
           <select id="sst_select" onchange="subject_chapter_selectFunction('sst_select')">
             <option disabled selected value> -- select -- </option>  
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/e4677e0d-02b7-4629-8ce4-1528c72857eb?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Economics Chapter-1
@@ -297,7 +297,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="science_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="science_select">Choose Chapter:</label>
           <select id="science_select" onchange="subject_chapter_selectFunction('science_select')">
             <option disabled selected value> -- select -- </option>  
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a1337699-3a87-4554-ab1d-577ec1ea55a2?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
@@ -332,7 +332,7 @@ function openSubject(evt, subjectName) {
                
           </div>
           <div id="choose_chapter">
-          <label for="sanskrit_select">Choose Chapter:</label>
+          <label id="label_choose_chapter" for="sanskrit_select">Choose Chapter:</label>
           <select id="sanskrit_select" onchange="subject_chapter_selectFunction('sanskrit_select')">
             <option disabled selected value> -- select -- </option>  
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ac3dc49-0d67-4e77-b471-bf56a324b66a?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1

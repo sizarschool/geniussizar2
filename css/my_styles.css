@@ -204,3 +204,19 @@
   border-top: none;
   
 }
+
+
+
+
+
+#choose_chapter {
+    display: flex; 
+    flex-flow: row nowrap; 
+    align-items: center;  
+    justify-content: flex-start;
+}
+
+
+#label_choose_chapter{
+    margin-right: 10px;
+}
