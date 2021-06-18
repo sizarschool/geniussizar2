@@ -112,7 +112,7 @@
 .sub_videos
 {
     display:flex;
-    flex-flow: nowrap; 
+    flex-flow: row nowrap ; 
     overflow: scroll;
     justify-content: space-around;
     align-content: space-around;
