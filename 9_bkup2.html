@@ -53,13 +53,55 @@
 
 </script>
 
-
 <script>
-function subject_chapter_selectFunction(subj) {
-  var x = document.getElementById(subj).value;
-  document.getElementById("subject_iframe").innerHTML = x;
+function hindi_selectFunction() {
+  var x = document.getElementById("hindi_select").value;
+  document.getElementById("hindi_iframe").innerHTML = x;
 }
 </script>
+
+<script>
+function english_selectFunction() {
+  var x = document.getElementById("english_select").value;
+  document.getElementById("english_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function maths_selectFunction() {
+  var x = document.getElementById("maths_select").value;
+  document.getElementById("maths_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function evs_selectFunction() {
+  var x = document.getElementById("evs_select").value;
+  document.getElementById("evs_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function sst_selectFunction() {
+  var x = document.getElementById("sst_select").value;
+  document.getElementById("sst_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function science_selectFunction() {
+  var x = document.getElementById("science_select").value;
+  document.getElementById("science_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function sanskrit_selectFunction() {
+  var x = document.getElementById("sanskrit_select").value;
+  document.getElementById("sanskrit_iframe").innerHTML = x;
+}
+</script>
+
 
 <script>
 function openSubject(evt, subjectName) {
@@ -139,8 +181,7 @@ function openSubject(evt, subjectName) {
 
           <div id="choose_chapter">
           <label for="hindi_select">Choose Chapter:</label>
-          <select id="hindi_select" onchange="subject_chapter_selectFunction('hindi_select')">
-            <option disabled selected value> -- select -- </option>
+          <select id="hindi_select" onchange="hindi_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/39e0518e-edac-4651-bbac-a86675340efa?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/cbe04b21-c568-450e-99cd-b820cad974a4?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/78b93d74-2e65-4be2-9e47-aa2cb7b2f11b?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-3
@@ -157,6 +198,12 @@ function openSubject(evt, subjectName) {
           </select>
           </div>
          
+          <div class="sub_videos">   
+              <div id="hindi_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/39e0518e-edac-4651-bbac-a86675340efa?warningTitle=0" frameborder="0" allowfullscreen></iframe>             
+              </div>             
+              
+          </div>
          
       </div>          
       <!-- hindi subject end-->     
@@ -173,8 +220,7 @@ function openSubject(evt, subjectName) {
           </div>
           <div id="choose_chapter">
           <label for="english_select">Choose Chapter:</label>
-          <select id="english_select" onchange="subject_chapter_selectFunction('english_select')">
-            <option disabled selected value> -- select -- </option>  
+          <select id="english_select" onchange="english_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/855fb039-41c5-4f45-9a66-c196efe817a2?warningTitle=0" frameborder="0" allowfullscreen></iframe> '>Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/0dda3278-9e35-4fbd-9b4c-a791bec9dc7c?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/81ba5362-497b-4926-881a-ada4dd702848?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-3
@@ -191,6 +237,12 @@ function openSubject(evt, subjectName) {
           </select>
           </div>
          
+          <div class="sub_videos">   
+              <div id="english_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="data:text/html,<p>Please select Chapter and Subject.</p>" frameborder="0" allowfullscreen></iframe>
+              </div>             
+              
+          </div> 
       </div>          
       <!-- English subject end-->       
       
@@ -206,8 +258,7 @@ function openSubject(evt, subjectName) {
           </div>
           <div id="choose_chapter">
           <label for="maths_select">Choose Chapter:</label>
-          <select id="maths_select" onchange="subject_chapter_selectFunction('maths_select')">
-            <option disabled selected value> -- select -- </option>  
+          <select id="maths_select" onchange="maths_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ebba925-f408-4060-9384-d3d98034b4e3?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1 part1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/455fcabc-e81b-4c4d-86ed-141af4d09007?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-1 part2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/83d07815-fe24-4ce4-8cf2-5edb37a05f2b?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
@@ -224,33 +275,17 @@ function openSubject(evt, subjectName) {
                 
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="maths_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ebba925-f408-4060-9384-d3d98034b4e3?warningTitle=0" frameborder="0" allowfullscreen></iframe>              
+              </div>             
+              
+          </div> 
       </div>          
       <!-- Maths subject end-->     
             
       
-
-      
-      <!-- EVS subject start-->      
-      <div id="Evs" class="tabcontent row">
-          <div id="evs" class="gen_lime" >
-              Environmental Studies
-          </div>
-          <div class="" style="padding-top:10px; padding-right:30px; text-align: right">
-               
-          </div>
-          <div id="choose_chapter">
-          <label for="evs_select">Choose Chapter:</label>
-          <select id="evs_select" onchange="subject_chapter_selectFunction('evs_select')">
-            <option disabled selected value> -- Subject not applicable -- </option>  
-          </select>
-          </div>
-          
-      </div>          
-      <!-- EVS subject end-->     
-            
-      
-
       
       
       <!-- sst subject start-->      
@@ -263,8 +298,7 @@ function openSubject(evt, subjectName) {
           </div>
           <div id="choose_chapter">
           <label for="sst_select">Choose Chapter:</label>
-          <select id="sst_select" onchange="subject_chapter_selectFunction('sst_select')">
-            <option disabled selected value> -- select -- </option>  
+          <select id="sst_select" onchange="sst_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/e4677e0d-02b7-4629-8ce4-1528c72857eb?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Economics Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/a2f4dd77-d759-4de7-b725-818321537400?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Economics Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/131b0cc7-fe76-440d-9537-59ad9c5f08fb?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Economics Chapter-3
@@ -279,7 +313,13 @@ function openSubject(evt, subjectName) {
                
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="sst_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/e4677e0d-02b7-4629-8ce4-1528c72857eb?warningTitle=0" frameborder="0" allowfullscreen></iframe>              
+              </div>             
+              
+          </div> 
       </div>          
       <!-- sst subject end-->       
       
@@ -296,8 +336,7 @@ function openSubject(evt, subjectName) {
           </div>
           <div id="choose_chapter">
           <label for="science_select">Choose Chapter:</label>
-          <select id="science_select" onchange="subject_chapter_selectFunction('science_select')">
-            <option disabled selected value> -- select -- </option>  
+          <select id="science_select" onchange="science_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a1337699-3a87-4554-ab1d-577ec1ea55a2?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/68b38d96-b8d7-4480-8ef3-7cfa9b55b859?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/83487e84-4984-4bc9-a280-2c5b991dbeb9?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-3
@@ -314,7 +353,13 @@ function openSubject(evt, subjectName) {
                  
           </select>
           </div>
-          
+         
+          <div class="sub_videos">   
+              <div id="science_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a1337699-3a87-4554-ab1d-577ec1ea55a2?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div> 
       </div>          
       <!-- science subject end-->     
             
@@ -331,8 +376,7 @@ function openSubject(evt, subjectName) {
           </div>
           <div id="choose_chapter">
           <label for="sanskrit_select">Choose Chapter:</label>
-          <select id="sanskrit_select" onchange="subject_chapter_selectFunction('sanskrit_select')">
-            <option disabled selected value> -- select -- </option>  
+          <select id="sanskrit_select" onchange="sanskrit_selectFunction()">
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ac3dc49-0d67-4e77-b471-bf56a324b66a?warningTitle=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://www.dailymotion.com/embed/video/x7v37p7?queue-enable=0&queue-autoplay-next=0&ui-logo=0&sharing-enable=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
             <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/71f881d7-5dc0-415d-aac4-b14a08500f4c?warningTitle=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3
@@ -349,13 +393,19 @@ function openSubject(evt, subjectName) {
           </select>
           </div>
          
+          <div class="sub_videos">   
+              <div id="sanskrit_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ac3dc49-0d67-4e77-b471-bf56a324b66a?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div> 
       </div>          
       <!-- sanskrit subject end-->     
             
 
           <div class="sub_videos">   
               <div id="subject_iframe">
-                <iframe sandbox="allow-same-origin allow-scripts " src="data:text/html,<p>Please select Chapter and Subject.</p>" frameborder="0" allowfullscreen></iframe>               
+                <iframe sandbox="allow-same-origin allow-scripts " src="https://open.tube/videos/embed/3ac3dc49-0d67-4e77-b471-bf56a324b66a?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
               </div>             
               
           </div>       
