@@ -27,6 +27,7 @@
 
    <script src="js/jquery-latest.min.js" type="text/javascript"></script>
 
+
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -52,120 +53,268 @@
 
 </script>
 
+
+<script>
+function subject_chapter_selectFunction(subj) {
+  var x = document.getElementById(subj).value;
+  document.getElementById("subject_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function openSubject(evt, subjectName) {
+  var m,i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(subjectName).style.display = "block";
+  evt.currentTarget.className += " active";
+  document.documentElement.scrollTop = 0;
+  
+  m=document.getElementById(subjectName).getElementsByTagName("select");
+  for (i = 0; i < m.length; i++) {
+    m[i].options[0].selected='selected';
+  }
+}
+
+</script>
+
+
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <div class="row">
+      <div style="position:sticky ;top:0; position: -webkit-sticky;"> 
+      <div class="row" >
         <div id="logo"> 
             <div> <h1><a href="index.html">Genius Sizar</a></h1> </div> 
             <div> <h5>Online Learning Portal</h5></div>
         </div>
       </div>
       
-      <div id="hindi"></div>
+      
   
-      <div class="row" style="position:sticky ;top:0; position: -webkit-sticky;" >
+      <div class="row" >
           <div class="row" id="grade_backtoschool">
                 <div class="" id="grade"> 
                     L.K.G.
                 </div>
                 <div id="backtoschool"> 
                     <a href='index.html'>Back to Home</a>
-                </div>
+                </div> 
                 <div id="backtoschool"> 
                     <A HREF="javascript:location.reload(true);">Refresh</A>
                 </div>               
           </div>
-                <div class="row">
-                    <div id="subject_menu">
-            
-                     <div class="subjects" ><a href='#hindi'>Hindi</a></div>
-                     <div class="subjects" ><a href='#english'>English</a></div>
-                     <div class="subjects" ><a href='#maths'>Maths</a></div>
-                     <div class="subjects" ><a href='#evs'>Ev.Study</a></div>
-                     <div class="subjects" ><a href='#sst'>Social Study</a></div>
-                     <div class="subjects" ><a href='#science'>Science</a></div>
-                     <div class="subjects" ><a href='#sanskrit'>Sanskrit</a></div>
-                     <div class="subjects" ><a href='#more'>More</a></div>
-                        
-                    </div>
-                </div>
-      </div>
+
+      </div> 
       
-      <!-- sticky menu part end-->
       
+      
+      <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks  active" onclick="openSubject(event, 'Hindi')">Hindi</button>
+            <button class="tablinks" onclick="openSubject(event, 'English')">English</button>
+            <button class="tablinks" onclick="openSubject(event, 'Maths')">Maths</button>
+            <button class="tablinks" onclick="openSubject(event, 'Evs')">Ev.Study</button>
+            <button class="tablinks" onclick="openSubject(event, 'Sst')">Social Study</button>
+            <button class="tablinks" onclick="openSubject(event, 'Science')">Science</button>
+            <button class="tablinks" onclick="openSubject(event, 'Sanskrit')">Sanskrit</button>
+            <button class="tablinks" onclick="openSubject(event, 'More')">More</button>
+        </div>
+  
+      </div>  <!-- sticky menu part end-->
+  
       <!-- hindi subject start-->      
-      <div class="row">
-          <div class="gen_lime" style="padding-top:20px ">
+      <div id='Hindi' class="tabcontent row" style= "display:block ;" > 
+          <div class="gen_lime" >
               Hindi
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/4d712cb8-c437-4433-95f4-2f2f46a89012?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/6fe78d8d-46e2-472d-816b-3e57c3df4613?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/d2dcb834-5792-4228-8551-5748062bc9dd?warningTitle=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/7d4e523a-f447-499c-ad61-0318f54de2b6?warningTitle=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/82724b76-ea26-40a3-a1cf-00c3d52e9e11?warningTitle=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-          </div> 
+          
+          <div class="" style="padding-top:05px; padding-right:30px; text-align: right"> 
+              
+          </div>
+
+          <div id="choose_chapter" >
+              
+          <label id="label_choose_chapter" for="hindi_select">Choose Chapter:</label>
+              
+          <select id="hindi_select" onchange="subject_chapter_selectFunction('hindi_select')">
+            <option disabled selected value> -- select -- </option>
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/4d712cb8-c437-4433-95f4-2f2f46a89012?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Varnamala Geet
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/96f15104-6708-4913-934b-c7a2648daa5b?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Hindi Varnamala
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/d2dcb834-5792-4228-8551-5748062bc9dd?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Alphabets song with animation
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/7d4e523a-f447-499c-ad61-0318f54de2b6?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Ka Kha Ga
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/82724b76-ea26-40a3-a1cf-00c3d52e9e11?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Hindi Letters
+    <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" title="PHONIX_ka kha ga" src="https://video.ploud.jp/videos/embed/7d4e523a-f447-499c-ad61-0318f54de2b6" frameborder="0" allowfullscreen></iframe>         
+          </select>
+          </div>
+         
+         
       </div>          
       <!-- hindi subject end-->     
       
-      <!-- english subject start-->      
-      <div class="row">
-          <div id="english" class="gen_lime" style="padding-top:100px ">
+      
+      
+      <!-- English subject start-->      
+      <div id='English' class="tabcontent row">
+          <div id="english" class="gen_lime" >
               English
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/83bdbc0c-288a-4b52-bb6e-18f39a48bf4a?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/981dc482-3d81-49f5-854f-0d5745f7873b?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/33114750-1bac-44c7-ae23-7e86847536be?warningTitle=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-          </div>        
-      </div>
-      <!-- english subject end-->  
-
-      <!-- maths subject start-->      
-      <div class="row">
-          <div id="maths" class="gen_lime" style="  padding-top:100px;   ">
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="english_select">Choose Chapter:</label>
+          <select id="english_select" onchange="subject_chapter_selectFunction('english_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/83bdbc0c-288a-4b52-bb6e-18f39a48bf4a?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> learn Alphabets Phonetics
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/e239f9c1-9206-4f24-a6f2-9920a25534a0?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Alphabet Rhymes
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/33114750-1bac-44c7-ae23-7e86847536be?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> A B C D Alphabet Song
+               
+          </select>
+          </div>
+         
+      </div>          
+      <!-- English subject end-->       
+      
+      
+      
+      <!-- Maths subject start-->      
+      <div id="Maths" class="tabcontent row">
+          <div id="maths" class="gen_lime" >
               Maths
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/a49092be-a079-4c26-af27-afce2137f901?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/dc881d33-51f9-4d79-bba0-c2b7827739bc?warningTitle=0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/ac79af65-221a-4d6f-9528-114c6cad1831?warningTitle=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="" frameborder="0" allowfullscreen></iframe>
-              </div>
-          </div>      
-      </div>
-      <!-- maths subject end-->        
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="maths_select">Choose Chapter:</label>
+          <select id="maths_select" onchange="subject_chapter_selectFunction('maths_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/a49092be-a079-4c26-af27-afce2137f901?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Numbers Counting Rhymes
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/dc881d33-51f9-4d79-bba0-c2b7827739bc?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> Count 1 to 100 Song
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/ac79af65-221a-4d6f-9528-114c6cad1831?warningTitle=0" frameborder="0" allowfullscreen></iframe>'> How to write numbers 1 to 100
+            
+          </select>
+          </div>
+          
+      </div>          
+      <!-- Maths subject end-->     
+            
+      
+
+      
+      <!-- EVS subject start-->      
+      <div id="Evs" class="tabcontent row">
+          <div id="evs" class="gen_lime" >
+              Environmental Studies
+          </div>
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="evs_select">Choose Chapter:</label>
+          <select id="evs_select" onchange="subject_chapter_selectFunction('evs_select')">
+            <option disabled selected value> -- Subject not applicable -- </option>
+            
+          </select>
+          </div>
+          
+      </div>          
+      <!-- EVS subject end-->     
+            
+      
+
+      
+      
+      <!-- sst subject start-->      
+      <div id="Sst" class="tabcontent row">
+          <div id="sst" class="gen_lime" >
+              Social Studies
+          </div>
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="sst_select">Choose Chapter:</label>
+          <select id="sst_select" onchange="subject_chapter_selectFunction('sst_select')">
+            <option disabled selected value> -- Subject not applicable -- </option>  
+              
+          </select>
+          </div>
+          
+      </div>          
+      <!-- sst subject end-->       
+      
+      
+      
+      
+      <!-- science subject start-->      
+      <div id="Science" class="tabcontent row">
+          <div id="science" class="gen_lime">
+              Science
+          </div>
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="science_select">Choose Chapter:</label>
+          <select id="science_select" onchange="subject_chapter_selectFunction('science_select')">
+            <option disabled selected value> -- Subject not applicable -- </option>
+            
+          </select>
+          </div>
+          
+      </div>          
+      <!-- science subject end-->     
+            
+ 
+      
+      
+      <!-- sanskrit subject start-->      
+      <div id="Sanskrit" class="tabcontent row">
+          <div id="sanskrit" class="gen_lime" >
+              Sanskrit
+          </div>
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="sanskrit_select">Choose Chapter:</label>
+          <select id="sanskrit_select" onchange="subject_chapter_selectFunction('sanskrit_select')">
+            <option disabled selected value> -- Subject not applicable -- </option>
+            
+          </select>
+          </div>
+         
+      </div>          
+      <!-- sanskrit subject end-->     
+            
+
+          <div class="sub_videos">   
+              <div id="subject_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="data:text/html,<p>Please select Chapter and Subject.</p>" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div>       
+      
+      
+
       
   </div>
+  
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+
+
