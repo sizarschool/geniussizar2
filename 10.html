@@ -12,7 +12,7 @@
 <meta name="generator" content="Studio eclipse http://aptana.com/" />
 <meta name="author" content="manoj" />
 <meta name="keywords" content="sizar, Online Learning Portal, Online Learning Portal for kids,SIZAR, school, School, dayboarding, day boarding, english medium, jaipur, pratap nagar, sanganer, CBSE based, cbse, boarding, play school, sports, rajasthan, Sizar school, sizarschool, sizar school, best school jaipur" />
-<meta http-equiv='Pragma' content=”no-cache”/>
+<meta http-equiv=“Pragma” content=”no-cache”/>
 <meta http-equiv=“Expires” content=”-1″/>
 <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”/>
 
@@ -26,6 +26,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
    <script src="js/jquery-latest.min.js" type="text/javascript"></script>
+
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -52,22 +53,55 @@
 
 </script>
 
+
+<script>
+function subject_chapter_selectFunction(subj) {
+  var x = document.getElementById(subj).value;
+  document.getElementById("subject_iframe").innerHTML = x;
+}
+</script>
+
+<script>
+function openSubject(evt, subjectName) {
+  var m,i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(subjectName).style.display = "block";
+  evt.currentTarget.className += " active";
+  document.documentElement.scrollTop = 0;
+  
+  m=document.getElementById(subjectName).getElementsByTagName("select");
+  for (i = 0; i < m.length; i++) {
+    m[i].options[0].selected='selected';
+  }
+}
+
+</script>
+
+
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <div class="row">
+      <div style="position:sticky ;top:0; position: -webkit-sticky;"> 
+      <div class="row" >
         <div id="logo"> 
             <div> <h1><a href="index.html">Genius Sizar</a></h1> </div> 
             <div> <h5>Online Learning Portal</h5></div>
         </div>
       </div>
       
-      <div id="hindi"></div>
+      
   
-      <div class="row" style="position:sticky ;top:0; position: -webkit-sticky;" >
+      <div class="row" >
           <div class="row" id="grade_backtoschool">
                 <div class="" id="grade"> 
                     Grade 10
@@ -79,168 +113,250 @@
                     <A HREF="javascript:location.reload(true);">Refresh</A>
                 </div>               
           </div>
-                <div class="row">
-                    <div id="subject_menu">
-            
-                     <div class="subjects" ><a href='#hindi'>Hindi</a></div>
-                     <div class="subjects" ><a href='#english'>English</a></div>
-                     <div class="subjects" ><a href='#maths'>Maths</a></div>
-                     <div class="subjects" ><a href='#evs'>Ev.Study</a></div>
-                     <div class="subjects" ><a href='#sst'>Social Study</a></div>
-                     <div class="subjects" ><a href='#science'>Science</a></div>
-                     <div class="subjects" ><a href='#sanskrit'>Sanskrit</a></div>
-                     <div class="subjects" ><a href='#more'>More</a></div>
-                        
-                    </div>
-                </div>
-      </div>
+
+      </div> 
       
-      <!-- sticky menu part end-->
       
+      
+      <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks  active" onclick="openSubject(event, 'Hindi')">Hindi</button>
+            <button class="tablinks" onclick="openSubject(event, 'English')">English</button>
+            <button class="tablinks" onclick="openSubject(event, 'Maths')">Maths</button>
+            <button class="tablinks" onclick="openSubject(event, 'Evs')">Ev.Study</button>
+            <button class="tablinks" onclick="openSubject(event, 'Sst')">Social Study</button>
+            <button class="tablinks" onclick="openSubject(event, 'Science')">Science</button>
+            <button class="tablinks" onclick="openSubject(event, 'Sanskrit')">Sanskrit</button>
+            <button class="tablinks" onclick="openSubject(event, 'More')">More</button>
+        </div>
+  
+      </div>  <!-- sticky menu part end-->
+  
       <!-- hindi subject start-->      
-      <div class="row">
-          <div class="gen_lime" style="padding-top:20px ">
+      <div id='Hindi' class="tabcontent row" style= "display:block ;" > 
+          <div class="gen_lime" >
               Hindi
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/89a63e3e-60e4-46bd-8b4a-d876fd0c8dc2" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/7f686cad-a67b-4ad0-9636-72c3471297dd" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/1b2b3985-2ed0-4c9d-ac37-a25966aac282" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/e410a5bd-cae5-49e1-b3e3-b17a4b516d1a" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/8c02fc6e-0a12-483e-a69d-b57ede5312cd" frameborder="0" allowfullscreen></iframe>
-              </div>
-          </div> 
+          
+          <div class="" style="padding-top:05px; padding-right:30px; text-align: right"> 
+              
+          </div>
+
+          <div id="choose_chapter" >
+              
+          <label id="label_choose_chapter" for="hindi_select">Choose Chapter:</label>
+              
+          <select id="hindi_select" onchange="subject_chapter_selectFunction('hindi_select')">
+            <option disabled selected value> -- select -- </option>
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/2d3f38a2-42db-4f11-a444-705a45bce382?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/030fe882-790d-4081-bac0-a343d601d22b?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/78baf265-29b0-45a6-9d4d-721917639523?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-3
+            <option value= '<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/091d8507-c545-4e8b-9770-3bb6f5e92643?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4
+            <option value=' <iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/8a176a11-a52b-4e10-beec-6a38735e0c23?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-5
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/1da730b0-d0a8-40be-88ce-45cf6077df43?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-6
+               
+          </select>
+          </div>
+         
+         
       </div>          
       <!-- hindi subject end-->     
       
-      <!-- english subject start-->      
-      <div class="row">
-          <div id="english" class="gen_lime" style="padding-top:100px ">
+      
+      
+      <!-- English subject start-->      
+      <div id='English' class="tabcontent row">
+          <div id="english" class="gen_lime" >
               English
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/9a7a4659-4a21-4209-b61e-48bac646360c" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/4126e4de-c75a-46b8-9acd-4c8288a43661" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/08117ad8-f785-41e5-9502-d7d2343b2197" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/a108b577-6afa-424e-a4b5-e2e076a3739a" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/eca2ca7c-8169-4263-856f-e9f77593b5c6" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              
-          </div>        
-      </div>
-      <!-- english subject end-->  
-
-      <!-- maths subject start-->      
-      <div class="row">
-          <div id="maths" class="gen_lime" style="  padding-top:100px;   ">
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="english_select">Choose Chapter:</label>
+          <select id="english_select" onchange="subject_chapter_selectFunction('english_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/82e86e64-1911-455e-8b65-6bdca22ca725?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe> '>Chapter-1 Part-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a11c8e8c-c2bf-4948-82d3-c079b6bd9b31?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-1 Part-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/de4c3467-4f8d-4e0a-895a-b16222120f63?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1 Part-3
+            <option value= '<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/35b963b2-e21c-4e1b-8764-61bc2ad81b2d?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2 Part-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/d2dc1e61-dde9-4028-982a-fd4de9fb51ea?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-2 Part-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/f8533121-e5d9-4225-8e65-894f11aa73d5?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe> '>Chapter-3 Part-1
+            
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/f7fcb2a8-873b-4a54-b36c-69cfc99b3ebf?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe> '>Chapter-3 Part-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/51752d25-653c-4985-9f13-3613b2a7aadd?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3 Part-3
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/bfddb149-816c-430c-9e6c-cc3194fac132?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-4 Part-1
+            <option value= '<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a771a10b-3a3e-4f74-9120-cadb3f8ed4cd?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4 Part-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/77428d91-8c9a-4330-aa5a-89191bc65ac7?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-5 Part-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/28baf6c2-8a7a-4ad6-b3b6-8134ec972fe3?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-5 Part-2
+                       
+          </select>
+          </div>
+         
+      </div>          
+      <!-- English subject end-->       
+      
+      
+      
+      <!-- Maths subject start-->      
+      <div id="Maths" class="tabcontent row">
+          <div id="maths" class="gen_lime" >
               Maths
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/75d0edd2-7841-4638-94fa-7342379b3cdb" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/e1d6e00a-cdcc-4730-a580-5adddfb4e8b0" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/dc050f9b-8dac-4e7d-b162-216bd31b91db" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/4fd91901-1f95-436a-b078-f3c4baa3a79c" frameborder="0" allowfullscreen></iframe>
-              </div>
-          </div>      
-      </div>
-      <!-- maths subject end-->        
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="maths_select">Choose Chapter:</label>
+          <select id="maths_select" onchange="subject_chapter_selectFunction('maths_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/d87a394a-a087-4d36-b2ff-5973388d69d1?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-1 part 1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/5b1e530d-70fe-4e40-b78d-ae1439cc2821?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-1 part 2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/ec0fd567-4080-4f45-96b6-d650f5d924a6?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-1 part 3
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/78c758d9-118c-48fd-9493-2af4e60fa2b4?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2 part 1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/1f7b5c07-73d2-44c9-8edb-d08c027927f7?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2 part 2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/1fe93644-1e1f-4f64-a94b-bdb416e5ba9c?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3 part 1               
+
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/5ab99db0-4e0c-494e-85c8-3da3bcada25e?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3 part 2 
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/c5dbc24d-85e0-41b1-a624-f96abdf86551?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3 part 3 
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/9cb4ba05-97b0-42e3-bccb-5e7177e77a73?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4 part 1 
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/dffa13b4-f614-481a-be2c-df498446ef79?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4 part 2 
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/fd8ad0e0-eab0-4f4b-afb1-728e24718195?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4 part 3
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/740ae493-f6e1-47ad-aa9b-b2526ccbc38a?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-5 part 1              
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/d43650d5-2641-4793-a269-395d35df1cde?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-5 part 2              
+                
+          </select>
+          </div>
+          
+      </div>          
+      <!-- Maths subject end-->     
+            
+      
+
+      
+      <!-- EVS subject start-->      
+      <div id="Evs" class="tabcontent row">
+          <div id="evs" class="gen_lime" >
+              Environmental Studies
+          </div>
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="evs_select">Choose Chapter:</label>
+          <select id="evs_select" onchange="subject_chapter_selectFunction('evs_select')">
+            <option disabled selected value> -- Subject not applicable -- </option>  
+          </select>
+          </div>
+          
+      </div>          
+      <!-- EVS subject end-->     
+            
+      
+
+      
       
       <!-- sst subject start-->      
-      <div class="row">
-          <div id="sst" class="gen_lime" style="  padding-top:100px;   ">
+      <div id="Sst" class="tabcontent row">
+          <div id="sst" class="gen_lime" >
               Social Studies
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/1a7665c7-ff24-42d1-9cb2-9bb1635fa516" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/777cb43c-2884-43a1-97e3-23f0c96d81d2" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/12c44e35-6532-4924-ad32-9597faa05318" frameborder="0" allowfullscreen></iframe>
-              </div>
-              
-          </div>      
-      </div>
-      <!-- sst subject end-->  
-
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="sst_select">Choose Chapter:</label>
+          <select id="sst_select" onchange="subject_chapter_selectFunction('sst_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/35655a29-9591-4c5e-88ab-0e6cf0e3a97d?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Geography Chapter-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/08f8b654-0be9-49b8-9238-35aeadafffab?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Geography Chapter-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/8e4189a4-c782-4daa-986e-819c6ff0b0ab?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Geography Chapter-3
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/f1b62551-b74d-4839-a961-885297b7fcff?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Geography Chapter-4     
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/d1d11c28-10e2-422c-aa1b-8bf2968ed252?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Geography Chapter-5
+                  
+          </select>
+          </div>
+          
+      </div>          
+      <!-- sst subject end-->       
+      
+      
+      
+      
       <!-- science subject start-->      
-      <div class="row">
-          <div id="science" class="gen_lime" style="  padding-top:100px;   ">
+      <div id="Science" class="tabcontent row">
+          <div id="science" class="gen_lime">
               Science
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/9c7c1c52-d4b3-4a7e-9cc7-246d9a4b67a2" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/e9aec79f-d7d9-4c95-b8e8-9195ccd0881f" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/350a5d21-058b-4db7-8f55-6ad68fc2c3bb" frameborder="0" allowfullscreen></iframe>
-              </div>
-                            
-          </div>      
-      </div>
-      <!-- science subject end-->
-
-     <!-- sanskrit subject start-->      
-      <div class="row">
-          <div id="sanskrit" class="gen_lime" style="  padding-top:100px;   ">
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="science_select">Choose Chapter:</label>
+          <select id="science_select" onchange="subject_chapter_selectFunction('science_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/443fae67-4fb7-4f70-b525-7e662a13a915?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/35e41846-25fe-4ccd-8634-a2706ea5b23d?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/b929aac0-7306-483b-b8cd-11f03b38b5c3?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-3
+            <option value= '<iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/197298ae-374d-4416-9ffd-dac920516b1a?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4
+            <option value=' <iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/10163310-741b-4aa4-9f91-485ceb53ed15?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-5
+              
+          </select>
+          </div>
+          
+      </div>          
+      <!-- science subject end-->     
+            
+ 
+      
+      
+      <!-- sanskrit subject start-->      
+      <div id="Sanskrit" class="tabcontent row">
+          <div id="sanskrit" class="gen_lime" >
               Sanskrit
           </div>
-          <div class="sub_videos">
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://video.ploud.jp/videos/embed/54609caf-508e-4ce3-a1ba-70af758b7bb5" frameborder="0" allowfullscreen></iframe>               
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://tube.4aem.com/videos/embed/82bafd8e-58f2-41c5-abee-b03464d34d59" frameborder="0" allowfullscreen></iframe>                         
-              </div>
-              <div>
-                <iframe sandbox="allow-same-origin allow-scripts " src="https://runtube.re/videos/embed/dec6ee68-5418-4622-8a30-1246afedcf1d" frameborder="0" allowfullscreen></iframe>                         
-              </div>
-              <div>
-                           
-              </div>
-              <div>
-                
-              </div>
-              <div>
-                
-              </div>
-          </div>      
-      </div>
-      <!-- sanskrit subject end-->      
+          <div class="" style="padding-top:5px; padding-right:30px; text-align: right">
+               
+          </div>
+          <div id="choose_chapter">
+          <label id="label_choose_chapter" for="sanskrit_select">Choose Chapter:</label>
+          <select id="sanskrit_select" onchange="subject_chapter_selectFunction('sanskrit_select')">
+            <option disabled selected value> -- select -- </option>  
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/a3f9b9fb-337a-4840-b77b-52b53475c3ba?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-1
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/5965f7e7-da65-449c-b652-0a7485ad45bf?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-2
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/4a19de2c-ed20-4823-9fe9-6778ed5dcac3?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-3
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/c351ded1-dcf8-4989-9949-cd0890c7c5ba?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-4
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/368fa324-f0e4-4937-b40c-285dc92be593?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-5
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/39e01409-b2eb-4477-bc5d-4cd12f98fd57?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-6                
+
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/ff10f5cd-f504-4b0e-91e4-581c630fd553?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-7
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/5aa7bcc3-7446-4422-9572-3fd85d10173c?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>'>Chapter-8
+            <option value='<iframe sandbox="allow-same-origin allow-scripts " src="https://peertube.su/videos/embed/ca2decd9-7c24-4524-ba71-38398bb43c0a?warningTitle=0&peertubeLink=0" frameborder="0" allowfullscreen></iframe>' >Chapter-9
+      
+          </select>
+          </div>
+         
+      </div>          
+      <!-- sanskrit subject end-->     
+            
+
+          <div class="sub_videos">   
+              <div id="subject_iframe">
+                <iframe sandbox="allow-same-origin allow-scripts " src="data:text/html,<p>Please select Chapter and Subject.</p>" frameborder="0" allowfullscreen></iframe>               
+              </div>             
+              
+          </div>       
+      
+      
+
+      
   </div>
+  
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+
+
 
